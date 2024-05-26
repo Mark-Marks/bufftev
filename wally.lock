@@ -3,16 +3,16 @@
 registry = "test"
 
 [[package]]
-name = "red-blox/guard"
-version = "1.0.1"
+name = "mark-marks/bufftev"
+version = "0.1.0"
+dependencies = [["Future", "tazmondo/future@2.0.2"], ["packeteer", "studio-delusion/packeteer@0.2.0"]]
+
+[[package]]
+name = "studio-delusion/packeteer"
+version = "0.2.0"
 dependencies = []
 
 [[package]]
 name = "tazmondo/future"
 version = "2.0.2"
 dependencies = []
-
-[[package]]
-name = "tazmondo/tev"
-version = "1.0.1"
-dependencies = [["Future", "tazmondo/future@2.0.2"], ["Guard", "red-blox/guard@1.0.1"]]

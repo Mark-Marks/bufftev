@@ -1,18 +1,12 @@
 [package]
-name = "tazmondo/tev"
-version = "1.0.2"
+name = "mark-marks/bufftev"
+version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "MIT"
 exclude = ["**"]
-include = [
-	"default.project.json",
-	"lib",
-	"lib/**",
-	"wally.toml",
-	"README.md",
-]
+include = ["default.project.json", "lib", "lib/**", "wally.toml", "README.md"]
 
 [dependencies]
 Future = "tazmondo/future@2.0.2"
-Guard = "red-blox/guard@1.0.0"
+packeteer = "studio-delusion/packeteer@0.2.0"
