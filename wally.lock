@@ -5,12 +5,7 @@ registry = "test"
 [[package]]
 name = "mark-marks/bufftev"
 version = "0.1.0"
-dependencies = [["Future", "tazmondo/future@2.0.2"], ["packeteer", "studio-delusion/packeteer@0.2.0"]]
-
-[[package]]
-name = "studio-delusion/packeteer"
-version = "0.2.0"
-dependencies = []
+dependencies = [["Future", "tazmondo/future@2.0.2"]]
 
 [[package]]
 name = "tazmondo/future"

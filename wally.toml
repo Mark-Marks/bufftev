@@ -9,4 +9,3 @@ include = ["default.project.json", "lib", "lib/**", "wally.toml", "README.md"]
 
 [dependencies]
 Future = "tazmondo/future@2.0.2"
-packeteer = "studio-delusion/packeteer@0.2.0"

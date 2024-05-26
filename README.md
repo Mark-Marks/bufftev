@@ -1,20 +1,24 @@
+# Bufftev
+
+Bufftev aims to be a fork of Tev that introduces buffer serdes without any necessary changes to an user's code.
+
 # Tev (Typed Event)
 
 I've used Red for a while (and have made contributions to it) and while I love the idea of shared event type definitions between server and client, there are various things that have cropped up while using it that have been bothering me, which are too significant to just make a PR to fix.
 
-- The API is unwieldy
-  - if using old events API, you need to do event.Server and event.Client to access the functions. this makes auto-import not work as well and is overall a pain
-  - the sharedevents api is just verbose. it exposes both server and client functions, so the method names become quite long
-- it has unnecessary batching
-  - this eliminates any ordering sent between different events on the same frame
-  - can marginally increase network usage if you aren't making use of it, since the lib has to send an extra identifier even if there's only one event being sent
-  - you very rarely actually need to send a lot of events on one frame to the same player, so the benefits are minimal
+-   The API is unwieldy
+    -   if using old events API, you need to do event.Server and event.Client to access the functions. this makes auto-import not work as well and is overall a pain
+    -   the sharedevents api is just verbose. it exposes both server and client functions, so the method names become quite long
+-   it has unnecessary batching
+    -   this eliminates any ordering sent between different events on the same frame
+    -   can marginally increase network usage if you aren't making use of it, since the lib has to send an extra identifier even if there's only one event being sent
+    -   you very rarely actually need to send a lot of events on one frame to the same player, so the benefits are minimal
 
 ## Advantages over other networking libraries
 
 ### Why not use Bytenet or Zap?
 
-Buffer-based networking does result in reduced network usage, but they are more involved to use. When you don't really *need* the performance benefits, there's not a whole lot of reason to use them and they slow down development.
+Buffer-based networking does result in reduced network usage, but they are more involved to use. When you don't really _need_ the performance benefits, there's not a whole lot of reason to use them and they slow down development.
 
 ### What about other networking libs?
 
@@ -36,8 +40,8 @@ This means that, unlike in Red, unhandled events are queued until the connection
 
 Events are named after which runtime dispatches them.
 
-- Server = Server -> Client
-- Client = Client -> Server
+-   Server = Server -> Client
+-   Client = Client -> Server
 
 Very similar to Red, just a slightly different API. Recommended to be used with red-blox guard too.
 
